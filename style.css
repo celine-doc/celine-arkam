@@ -1,158 +1,236 @@
-/*En-tête*/
-header {
-    background-color: rgb(245, 231, 237);
-    padding: 20px; /*espace autour du texte*/
-    text-align: center;
-}
-
-/* Enlever les puces de la liste */
-nav ul {
-    list-style-type: none; 
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* En-tête */
+header {
+    background-color: #004080;
+    color: white;
+    padding: 5px;
     text-align: center;
 }
 
-/* Pour aligner les éléments horizontalement (en ligne) */
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header img {
+    display: block;
+    margin: 0 auto;
+}
+
+nav {
+    background: #0055aa;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
 nav ul li {
-    display: inline-block;
-    margin-right: 30px;
+    margin: 0 15px;
 }
 
-#logo{
-    width: 60px;
-    margin-bottom: 30px;
-}
-
-/* Style pour les liens */
 nav ul li a {
-    text-decoration: none;  /* Enlève le souligné des liens */
-    color: rgb(168, 41, 100);     
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
 }
 
-/*Main*/
-main{
-    text-align: justify;
-    padding: 100px;
+nav ul li a:hover {
+    background-color: #003366;
+    border-radius: 5px;
+}
+/* Style du menu latéral ultra-compact */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 140px; /* Réduit encore la largeur pour un menu très compact */
+    height: 100vh; /* Prend toute la hauteur de la page */
+    background: rgba(51, 51, 51, 0.9);
+    padding: 10px 0;
+    border-radius: 0 10px 10px 0;
 }
 
- /*Heading*/
-h1,h2,h3,h4,h5,h6{
+.side-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    gap: 10px;
+    height: 100%; /* Prend toute la hauteur disponible */
+}
+
+.side-menu li {
+    margin: 0;
+}
+
+.side-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 12px;
+    background: #222;
+    border-radius: 5px;
+    transition: background 0.3s;
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-bottom: 10px;
+    width: 120px; /* Assure une largeur identique */
+    min-height: 40px; /* Assure une hauteur identique */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-h1{
-    color: rgb(168, 41, 100);
+
+.side-menu a:hover {
+    background: #f39c12;
 }
 
-h2,h3{
-    color: rgb(203, 105, 150);
+/* Défilement fluide */
+html {
+    scroll-behavior: smooth;
 }
 
-h4,h5,h6{
-    color: rgb(207, 139, 171);
-}
 
-/*Paragraphe*/
-p{
-    text-indent :30px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    line-height: 1.6;
-}
-ul>li{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-bottom: 5px;
-}
 
-aside {
-    background-color: rgba(245, 231, 237, 0.3);
-    padding: 15px;
-    border-left: 4px solid rgb(168, 41, 100);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-/*id*/
-#mini-site {
-    color: rgb(207, 139, 171);
-    font-size: 18px;
-    text-align: center;
-    font-style: italic;
-}
-
-/* Mettre en valeur les sections */
-section {
-    margin-bottom: 50px;
+/* Contenu principal */
+main {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
     padding: 20px;
     border-radius: 10px;
-    background-color: rgba(245, 231, 237, 0.4);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Mise en page pour la section "Me contacter" */
-section ul li {
-    margin-bottom: 10px;
-    text-align: justify;
+h2 {
+    color: #004080;
+    border-bottom: 3px solid #004080;
+    padding-bottom: 5px;
 }
 
-strong{
-    color: rgb(168, 41, 100);
+/* Style des images */
+img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+.team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Section avec une image */
-figure {
-    text-align: center;
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     margin-top: 20px;
 }
 
-figcaption {
-    font-style: italic;
-    margin-top: 10px;
-    color: rgb(168, 41, 100);
-}
-
-/*Bouton dans compétences*/
-button a {
-    text-decoration: none;
-    color: white; 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 10px 20px;
-}
-button{    
-    background-color: rgb(203, 105, 150);
-    border: none;
-    border-radius: 5px;}
-
-/*Tableau des langues*/
-table {
-    width:50%;
-    margin: auto; 
-    border-collapse: collapse; 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}  
-th, td {
-    padding: 10px; 
-    text-align: center; 
-}
-    
-th {
-    background-color: rgb(168, 41, 100);
-    color: white; 
-}
-td{
-    background-color: white;
-    color:rgb(168, 41, 100);
-}
-table>caption{
-    caption-side: bottom;
-    font-size: x-small;
-    color:rgb(207, 139, 171);
-}
-    
-/*Pied de page*/
-footer{
-    padding-top: 70px;
-    padding-bottom: 70px;
-    background-color:rgb(245, 231, 237) ;
+.team-member {
     text-align: center;
+}
+
+.team-member h3 {
+    margin-bottom: 10px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.team-member .email-icon {
+    display: block;
+    margin-top: 10px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+/* Tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #004080;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Liste */
+ul {
+    list-style: square inside;
+    padding: 10px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    display: block;
+    margin-top: 5px;
+}
+/* Pied de page */
+footer {
+    text-align: center;
+    background: #004080;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ff9900;
+}
+.email-icon::before {
+    content: "📧 ";
+    font-size: 16px;
+    margin-right: 5px;
 }
