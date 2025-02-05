@@ -11,7 +11,7 @@ body {
 header {
     background-color: #004080;
     color: white;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -54,6 +54,59 @@ nav ul li a:hover {
     background-color: #003366;
     border-radius: 5px;
 }
+/* Style du menu latéral ultra-compact */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 140px; /* Réduit encore la largeur pour un menu très compact */
+    height: 100vh; /* Prend toute la hauteur de la page */
+    background: rgba(51, 51, 51, 0.9);
+    padding: 10px 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.side-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    gap: 10px;
+    height: 100%; /* Prend toute la hauteur disponible */
+}
+
+.side-menu li {
+    margin: 0;
+}
+
+.side-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 12px;
+    background: #222;
+    border-radius: 5px;
+    transition: background 0.3s;
+    text-align: center;
+    width: 120px; /* Assure une largeur identique */
+    min-height: 40px; /* Assure une hauteur identique */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.side-menu a:hover {
+    background: #f39c12;
+}
+
+/* Défilement fluide */
+html {
+    scroll-behavior: smooth;
+}
+
+
 
 /* Contenu principal */
 main {
@@ -181,4 +234,3 @@ footer a:hover {
     font-size: 16px;
     margin-right: 5px;
 }
-
